@@ -284,6 +284,10 @@ static NSArray *customTranslations;
     return NSLocalizedStringWithDefaultValue(@"CARD_TYPE_UNION_PAY", [self localizationTable], [self localizationBundle], @"UnionPay", @"CARD_TYPE_UNION_PAY");
 }
 
++ (NSString *)CARD_TYPE_ELO {
+    return NSLocalizedStringWithDefaultValue(@"CARD_TYPE_ELO", [self localizationTable], [self localizationBundle], @"Elo", @"CARD_TYPE_ELO");
+}
+
 + (NSString *)BRANDING_COINBASE {
     return NSLocalizedStringWithDefaultValue(@"BRANDING_COINBASE", [self localizationTable], [self localizationBundle], @"Coinbase", @"BRANDING_COINBASE");
 }

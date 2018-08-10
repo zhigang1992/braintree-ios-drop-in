@@ -51,6 +51,7 @@
     [sampleCards addObject:@[@"5018000000000000122", @"Maestro"]];
     [sampleCards addObject:@[@"6703000000000007", @"Maestro"]];
     [sampleCards addObject:@[@"6020111111111116", @"Maestro"]];
+    [sampleCards addObject:@[@"676420111111111116", @"Maestro"]];
 
     // Union Pay
     [sampleCards addObject:@[@"6240888888888885", @"UnionPay"]];

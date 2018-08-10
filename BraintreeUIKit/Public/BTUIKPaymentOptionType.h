@@ -17,4 +17,5 @@ typedef NS_ENUM(NSInteger, BTUIKPaymentOptionType) {
     BTUIKPaymentOptionTypeCoinbase,
     BTUIKPaymentOptionTypeVenmo,
     BTUIKPaymentOptionTypeApplePay,
+    BTUIKPaymentOptionTypeElo,
 };

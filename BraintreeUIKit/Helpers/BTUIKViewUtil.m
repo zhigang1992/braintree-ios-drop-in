@@ -56,6 +56,8 @@
         return BTUIKPaymentOptionTypeDinersClub;
     } else if ([cardType.brand isEqualToString:BTUIKLocalizedString(CARD_TYPE_UNION_PAY)]) {
         return BTUIKPaymentOptionTypeUnionPay;
+    } else if ([cardType.brand isEqualToString:BTUIKLocalizedString(CARD_TYPE_ELO)]) {
+        return BTUIKPaymentOptionTypeElo;
     } else {
         return BTUIKPaymentOptionTypeUnknown;
     }
@@ -97,6 +99,8 @@
           return BTUIKLocalizedString(BRANDING_VENMO);
     case BTUIKPaymentOptionTypeApplePay:
         return BTUIKLocalizedString(BRANDING_APPLE_PAY);
+    case BTUIKPaymentOptionTypeElo:
+        return BTUIKLocalizedString(CARD_TYPE_ELO);
     }
 }
 
@@ -139,6 +143,8 @@
         return BTUIKPaymentOptionTypeVenmo;
     } else if ([typeString isEqualToString:@"ApplePay"]) {
         return BTUIKPaymentOptionTypeApplePay;
+    } else if ([typeString isEqualToString:@"Elo"]) {
+        return BTUIKPaymentOptionTypeElo;
     } else {
         return BTUIKPaymentOptionTypeUnknown;
     }
@@ -158,6 +164,7 @@
         case BTUIKPaymentOptionTypeLaser:
         case BTUIKPaymentOptionTypeSwitch:
         case BTUIKPaymentOptionTypeUnionPay:
+        case BTUIKPaymentOptionTypeElo:
             return YES;
         default:
             return NO;
@@ -205,6 +212,7 @@
         case BTUIKPaymentOptionTypeLaser:
         case BTUIKPaymentOptionTypeSwitch:
         case BTUIKPaymentOptionTypeUnknown:
+        case BTUIKPaymentOptionTypeElo:
             return size == BTUIKVectorArtSizeRegular ? [BTUIKUnknownCardVectorArtView new] : [BTUIKLargeUnknownCardVectorArtView new];
     }
 }
