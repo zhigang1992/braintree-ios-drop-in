@@ -40,6 +40,7 @@
 @property (nonatomic, strong, readwrite) BTUIKMobileCountryCodeFormField *mobileCountryCodeField;
 @property (nonatomic, strong, readwrite) BTUIKMobileNumberFormField *mobilePhoneField;
 @property (nonatomic, strong, readwrite) BTUIKAddressLine1FormField *addressLine1Field;
+@property (nonatomic, strong, readwrite) BTUIKAddressLine1FormField *addressLine2Field;
 @property (nonatomic, strong) UIStackView *cardNumberErrorView;
 @property (nonatomic, strong) UIStackView *cardNumberHeader;
 @property (nonatomic, strong) UIStackView *enrollmentFooter;
@@ -198,6 +199,8 @@
     self.mobilePhoneField.delegate = self;
     self.addressLine1Field = [[BTUIKAddressLine1FormField alloc] init];
     self.addressLine1Field.delegate = self;
+    self.addressLine2Field = [[BTUIKAddressLine2FormField alloc] init];
+    self.addressLine2Field.delegate = self;
     
     self.cardNumberHeader = [BTDropInUIUtilities newStackView];
     self.cardNumberHeader.layoutMargins = UIEdgeInsetsMake(0, [BTUIKAppearance verticalFormSpace], 0, [BTUIKAppearance verticalFormSpace]);
@@ -211,7 +214,7 @@
     [BTDropInUIUtilities addSpacerToStackView:self.cardNumberHeader beforeView:cardNumberHeaderLabel size: [BTUIKAppearance verticalFormSpace]];
     [self.stackView addArrangedSubview:self.cardNumberHeader];
 
-    self.formFields = @[self.cardNumberField, self.cardholderNameField, self.expirationDateField, self.securityCodeField, self.postalCodeField, self.mobileCountryCodeField, self.mobilePhoneField, self.addressLine1Field];
+    self.formFields = @[self.cardNumberField, self.cardholderNameField, self.expirationDateField, self.securityCodeField, self.postalCodeField, self.mobileCountryCodeField, self.mobilePhoneField, self.addressLine1Field, self.addressLine2Field];
 
     for (NSUInteger i = 0; i < self.formFields.count; i++) {
         BTUIKFormField *formField = self.formFields[i];
@@ -235,6 +238,7 @@
     self.mobileCountryCodeField.hidden = YES;
     self.mobilePhoneField.hidden = YES;
     self.addressLine1Field.hidden = YES;
+    self.addressLine2Field.hidden = YES;
 
     [BTDropInUIUtilities addSpacerToStackView:self.stackView beforeView:self.cardNumberField size: [BTUIKAppearance verticalFormSpace]];
     [BTDropInUIUtilities addSpacerToStackView:self.stackView beforeView:self.cardholderNameField size: [BTUIKAppearance verticalFormSpace]];
@@ -401,6 +405,7 @@
             self.mobileCountryCodeField.hidden = ![self.requiredFields containsObject:self.mobileCountryCodeField] || collapsed;
             self.mobilePhoneField.hidden = ![self.requiredFields containsObject:self.mobilePhoneField] || collapsed;
             self.addressLine1Field.hidden = collapsed;
+            self.addressLine2Field.hidden = collapsed;
             self.enrollmentFooter.hidden = self.mobilePhoneField.hidden;
             [self updateFormBorders];
         } completion:^(__unused BOOL finished) {
@@ -413,6 +418,7 @@
             self.mobileCountryCodeField.hidden = ![self.requiredFields containsObject:self.mobileCountryCodeField] || collapsed;
             self.mobilePhoneField.hidden = ![self.requiredFields containsObject:self.mobilePhoneField] || collapsed;
             self.addressLine1Field.hidden = collapsed;
+            self.addressLine2Field.hidden = collapsed;
             self.enrollmentFooter.hidden = self.mobilePhoneField.hidden;
             
             [self updateFormBorders];
@@ -484,7 +490,7 @@
     self.mobileCountryCodeField.interFieldBorder = YES;
     self.mobilePhoneField.bottomBorder = YES;
 
-    NSArray *groupedFormFields = @[self.cardholderNameField, self.expirationDateField, self.securityCodeField, self.postalCodeField];
+    NSArray *groupedFormFields = @[self.cardholderNameField, self.expirationDateField, self.securityCodeField, self.postalCodeField, self.addressLine1Field, self.addressLine2Field];
     BOOL topBorderAdded = NO;
     BTUIKFormField* lastVisibleFormField;
     for (NSUInteger i = 0; i < groupedFormFields.count; i++) {
