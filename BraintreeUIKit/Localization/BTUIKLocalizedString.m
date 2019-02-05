@@ -251,6 +251,9 @@ static NSArray *customTranslations;
     return NSLocalizedStringWithDefaultValue(@"CARDHOLDER_NAME_LABEL", [self localizationTable], [self localizationBundle], @"Cardholder Name", @"CARDHOLDER_NAME_LABEL");
 }
 
++ (NSString *)ADDRESS_LINE1_LABEL {
+    return NSLocalizedStringWithDefaultValue(@"ADDRESS_LINE1_LABEL", [self localizationTable], [self localizationBundle], @"Address Line 1", @"ADDRESS_LINE1_LABEL");
+}
 
 + (NSString *)PAYPAL {
     return NSLocalizedStringWithDefaultValue(@"PAYPAL", [self localizationTable], [self localizationBundle], @"PayPal", @"PAYPAL");
