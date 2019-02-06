@@ -40,7 +40,7 @@
 @property (nonatomic, strong, readwrite) BTUIKMobileCountryCodeFormField *mobileCountryCodeField;
 @property (nonatomic, strong, readwrite) BTUIKMobileNumberFormField *mobilePhoneField;
 @property (nonatomic, strong, readwrite) BTUIKAddressLine1FormField *addressLine1Field;
-@property (nonatomic, strong, readwrite) BTUIKAddressLine1FormField *addressLine2Field;
+@property (nonatomic, strong, readwrite) BTUIKAddressLine2FormField *addressLine2Field;
 @property (nonatomic, strong) UIStackView *cardNumberErrorView;
 @property (nonatomic, strong) UIStackView *cardNumberHeader;
 @property (nonatomic, strong) UIStackView *enrollmentFooter;
@@ -376,6 +376,12 @@
     }
     if (self.cardholderNameField.cardholderName.length) {
         card.cardholderName = self.cardholderNameField.cardholderName;
+    }
+    if (self.addressLine1Field.addressLine1.length) {
+        card.streetAddress = self.addressLine1Field.addressLine1;
+    }
+    if (self.addressLine2Field.addressLine2.length) {
+        card.extendedAddress = self.addressLine2Field.addressLine2;
     }
     
     card.shouldValidate = self.apiClient.tokenizationKey ? NO : YES;
