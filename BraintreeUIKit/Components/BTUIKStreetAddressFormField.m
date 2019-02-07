@@ -1,13 +1,13 @@
-#import "BTUIKAddressLine1FormField.h"
+#import "BTUIKStreetAddressFormField.h"
 #import "BTUIKLocalizedString.h"
 
-@implementation BTUIKAddressLine1FormField
+@implementation BTUIKStreetAddressFormField
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.textField.accessibilityLabel = BTUIKLocalizedString(ADDRESS_LINE1_LABEL);
-        self.formLabel.text = BTUIKLocalizedString(ADDRESS_LINE1_LABEL);
+        self.textField.accessibilityLabel = BTUIKLocalizedString(STREET_ADDRESS_LABEL);
+        self.formLabel.text = BTUIKLocalizedString(STREET_ADDRESS_LABEL);
         
         self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
         self.textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
@@ -17,13 +17,13 @@
     return self;
 }
 
-- (NSString *)addressLine1 {
+- (NSString *)streetAddress {
     return self.textField.text;
 }
 
 - (BOOL)valid {
     if (self.isRequired) {
-        return [self.addressLine1 stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceCharacterSet].length > 0;
+        return [self.streetAddress stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceCharacterSet].length > 0;
     }
     else {
         return YES;

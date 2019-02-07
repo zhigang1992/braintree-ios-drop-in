@@ -251,12 +251,24 @@ static NSArray *customTranslations;
     return NSLocalizedStringWithDefaultValue(@"CARDHOLDER_NAME_LABEL", [self localizationTable], [self localizationBundle], @"Cardholder Name", @"CARDHOLDER_NAME_LABEL");
 }
 
-+ (NSString *)ADDRESS_LINE1_LABEL {
-    return NSLocalizedStringWithDefaultValue(@"ADDRESS_LINE1_LABEL", [self localizationTable], [self localizationBundle], @"Address Line 1", @"ADDRESS_LINE1_LABEL");
++ (NSString *)STREET_ADDRESS_LABEL {
+    return NSLocalizedStringWithDefaultValue(@"STREET_ADDRESS_LABEL", [self localizationTable], [self localizationBundle], @"Street Address", @"STREET_ADDRESS_LABEL");
 }
 
-+ (NSString *)ADDRESS_LINE2_LABEL {
-    return NSLocalizedStringWithDefaultValue(@"ADDRESS_LINE2_LABEL", [self localizationTable], [self localizationBundle], @"Address Line 2", @"ADDRESS_LINE2_LABEL");
++ (NSString *)EXTENDED_ADDRESS_LABEL {
+    return NSLocalizedStringWithDefaultValue(@"EXTENDED_ADDRESS_LABEL", [self localizationTable], [self localizationBundle], @"Extended Address", @"EXTENDED_ADDRESS_LABEL");
+}
+
++ (NSString *)LOCALITY_LABEL {
+    return NSLocalizedStringWithDefaultValue(@"LOCALITY_LABEL", [self localizationTable], [self localizationBundle], @"City", @"LOCALITY_LABEL");
+}
+
++ (NSString *)REGION_LABEL {
+    return NSLocalizedStringWithDefaultValue(@"REGION_LABEL", [self localizationTable], [self localizationBundle], @"State", @"REGION_LABEL");
+}
+
++ (NSString *)COUNTRY_CODE_LABEL {
+    return NSLocalizedStringWithDefaultValue(@"COUNTRY_CODE_LABEL", [self localizationTable], [self localizationBundle], @"Country", @"COUNTRY_CODE_LABEL");
 }
 
 + (NSString *)PAYPAL {

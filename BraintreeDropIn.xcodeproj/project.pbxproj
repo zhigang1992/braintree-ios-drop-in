@@ -18,10 +18,16 @@
 		03AE59581DDE7E8C000B594C /* BTUIKVisualAssetType.h in Headers */ = {isa = PBXBuildFile; fileRef = 03AE59571DDE7E8C000B594C /* BTUIKVisualAssetType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03B793AD1DAD61B500F54B1B /* BTDropInResultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B793AC1DAD61B500F54B1B /* BTDropInResultTests.m */; };
 		03FFF6B01DB82E9D004A1F9B /* BTUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = A52900E81D8903A600032220 /* BTUI.strings */; };
-		805B03E4220A2AF300DE2BC5 /* BTUIKAddressLine1FormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 805B03E2220A2AF300DE2BC5 /* BTUIKAddressLine1FormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		805B03E5220A2AF300DE2BC5 /* BTUIKAddressLine1FormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 805B03E3220A2AF300DE2BC5 /* BTUIKAddressLine1FormField.m */; };
-		80AABB4F220A3A26005EBA24 /* BTUIKAddressLine2FormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 80AABB4D220A3A26005EBA24 /* BTUIKAddressLine2FormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		80AABB50220A3A26005EBA24 /* BTUIKAddressLine2FormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AABB4E220A3A26005EBA24 /* BTUIKAddressLine2FormField.m */; };
+		805B03E4220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 805B03E2220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		805B03E5220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 805B03E3220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.m */; };
+		8078C3D3220C87BC003D88F0 /* BTUIKLocalityFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 8078C3D1220C87BC003D88F0 /* BTUIKLocalityFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8078C3D4220C87BC003D88F0 /* BTUIKLocalityFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8078C3D2220C87BC003D88F0 /* BTUIKLocalityFormField.m */; };
+		8078C3D7220C8A61003D88F0 /* BTUIKRegionFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 8078C3D5220C8A61003D88F0 /* BTUIKRegionFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8078C3D8220C8A61003D88F0 /* BTUIKRegionFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8078C3D6220C8A61003D88F0 /* BTUIKRegionFormField.m */; };
+		8078C3DB220C8CB5003D88F0 /* BTUIKCountryCodeFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 8078C3D9220C8CB5003D88F0 /* BTUIKCountryCodeFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8078C3DC220C8CB5003D88F0 /* BTUIKCountryCodeFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8078C3DA220C8CB5003D88F0 /* BTUIKCountryCodeFormField.m */; };
+		80AABB4F220A3A26005EBA24 /* BTUIKExtendedAddressFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 80AABB4D220A3A26005EBA24 /* BTUIKExtendedAddressFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80AABB50220A3A26005EBA24 /* BTUIKExtendedAddressFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AABB4E220A3A26005EBA24 /* BTUIKExtendedAddressFormField.m */; };
 		A03FC5AB215AD10B00E3DF95 /* BTUIKCardholderNameFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = A03FC5A9215AD10B00E3DF95 /* BTUIKCardholderNameFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A03FC5AC215AD10B00E3DF95 /* BTUIKCardholderNameFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = A03FC5AA215AD10B00E3DF95 /* BTUIKCardholderNameFormField.m */; };
 		A50ED7A61D8AF8C400A78EF0 /* BTPaymentSelectionViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A50ED7A51D8AF8C400A78EF0 /* BTPaymentSelectionViewControllerTests.m */; };
@@ -266,10 +272,16 @@
 		273802B93A7925EB38CBFA75 /* Pods-DropInDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropInDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DropInDemo/Pods-DropInDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		4E893F56079C5D0E5FB1FF07 /* Pods-Tests-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-UnitTests/Pods-Tests-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69624BD75D7A10A1C4C5B0F8 /* Pods-DropInDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropInDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DropInDemo/Pods-DropInDemo.release.xcconfig"; sourceTree = "<group>"; };
-		805B03E2220A2AF300DE2BC5 /* BTUIKAddressLine1FormField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKAddressLine1FormField.h; sourceTree = "<group>"; };
-		805B03E3220A2AF300DE2BC5 /* BTUIKAddressLine1FormField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKAddressLine1FormField.m; sourceTree = "<group>"; };
-		80AABB4D220A3A26005EBA24 /* BTUIKAddressLine2FormField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKAddressLine2FormField.h; sourceTree = "<group>"; };
-		80AABB4E220A3A26005EBA24 /* BTUIKAddressLine2FormField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKAddressLine2FormField.m; sourceTree = "<group>"; };
+		805B03E2220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKStreetAddressFormField.h; sourceTree = "<group>"; };
+		805B03E3220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKStreetAddressFormField.m; sourceTree = "<group>"; };
+		8078C3D1220C87BC003D88F0 /* BTUIKLocalityFormField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKLocalityFormField.h; sourceTree = "<group>"; };
+		8078C3D2220C87BC003D88F0 /* BTUIKLocalityFormField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKLocalityFormField.m; sourceTree = "<group>"; };
+		8078C3D5220C8A61003D88F0 /* BTUIKRegionFormField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKRegionFormField.h; sourceTree = "<group>"; };
+		8078C3D6220C8A61003D88F0 /* BTUIKRegionFormField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKRegionFormField.m; sourceTree = "<group>"; };
+		8078C3D9220C8CB5003D88F0 /* BTUIKCountryCodeFormField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKCountryCodeFormField.h; sourceTree = "<group>"; };
+		8078C3DA220C8CB5003D88F0 /* BTUIKCountryCodeFormField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKCountryCodeFormField.m; sourceTree = "<group>"; };
+		80AABB4D220A3A26005EBA24 /* BTUIKExtendedAddressFormField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKExtendedAddressFormField.h; sourceTree = "<group>"; };
+		80AABB4E220A3A26005EBA24 /* BTUIKExtendedAddressFormField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKExtendedAddressFormField.m; sourceTree = "<group>"; };
 		9053ABB714FF46965A04A3D0 /* libPods-DropInDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropInDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9A2DAB5BA53008228298F4 /* libPods-Tests-UnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-UnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03FC5A9215AD10B00E3DF95 /* BTUIKCardholderNameFormField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKCardholderNameFormField.h; sourceTree = "<group>"; };
@@ -565,8 +577,6 @@
 		A52900CF1D8903A600032220 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				805B03E3220A2AF300DE2BC5 /* BTUIKAddressLine1FormField.m */,
-				80AABB4E220A3A26005EBA24 /* BTUIKAddressLine2FormField.m */,
 				A52900D01D8903A600032220 /* BTUIKBarButtonItem.h */,
 				A52900D11D8903A600032220 /* BTUIKBarButtonItem.m */,
 				A03FC5AA215AD10B00E3DF95 /* BTUIKCardholderNameFormField.m */,
@@ -574,17 +584,22 @@
 				A52900D31D8903A600032220 /* BTUIKCardNumberFormField.m */,
 				A52900D41D8903A600032220 /* BTUIKCollectionReusableView.h */,
 				A52900D51D8903A600032220 /* BTUIKCollectionReusableView.m */,
+				8078C3DA220C8CB5003D88F0 /* BTUIKCountryCodeFormField.m */,
 				A52900D61D8903A600032220 /* BTUIKExpiryFormField.m */,
 				A52900D71D8903A600032220 /* BTUIKExpiryInputCollectionViewCell.h */,
 				A52900D81D8903A600032220 /* BTUIKExpiryInputCollectionViewCell.m */,
 				A52900D91D8903A600032220 /* BTUIKExpiryInputView.m */,
+				80AABB4E220A3A26005EBA24 /* BTUIKExtendedAddressFormField.m */,
 				A52900DA1D8903A600032220 /* BTUIKFormField.m */,
 				A52900DB1D8903A600032220 /* BTUIKInputAccessoryToolbar.m */,
+				8078C3D2220C87BC003D88F0 /* BTUIKLocalityFormField.m */,
 				A52900DC1D8903A600032220 /* BTUIKMobileCountryCodeFormField.m */,
 				A52900DD1D8903A600032220 /* BTUIKMobileNumberFormField.m */,
 				A52900DE1D8903A600032220 /* BTUIKPaymentOptionCardView.m */,
 				A52900DF1D8903A600032220 /* BTUIKPostalCodeFormField.m */,
+				8078C3D6220C8A61003D88F0 /* BTUIKRegionFormField.m */,
 				A52900E01D8903A600032220 /* BTUIKSecurityCodeFormField.m */,
+				805B03E3220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.m */,
 				A52900E11D8903A600032220 /* BTUIKTextField.m */,
 			);
 			path = Components;
@@ -624,8 +639,6 @@
 			isa = PBXGroup;
 			children = (
 				A52901041D8903A600032220 /* BraintreeUIKit.h */,
-				805B03E2220A2AF300DE2BC5 /* BTUIKAddressLine1FormField.h */,
-				80AABB4D220A3A26005EBA24 /* BTUIKAddressLine2FormField.h */,
 				A52901051D8903A600032220 /* BTUIKAppearance.h */,
 				A52901061D8903A600032220 /* BTUIKCardExpirationValidator.h */,
 				A52901071D8903A600032220 /* BTUIKCardExpiryFormat.h */,
@@ -633,17 +646,22 @@
 				A52901081D8903A600032220 /* BTUIKCardListLabel.h */,
 				A52901091D8903A600032220 /* BTUIKCardNumberFormField.h */,
 				A529010A1D8903A600032220 /* BTUIKCardType.h */,
+				8078C3D9220C8CB5003D88F0 /* BTUIKCountryCodeFormField.h */,
 				A529010B1D8903A600032220 /* BTUIKExpiryFormField.h */,
 				A529010C1D8903A600032220 /* BTUIKExpiryInputView.h */,
+				80AABB4D220A3A26005EBA24 /* BTUIKExtendedAddressFormField.h */,
 				A529010D1D8903A600032220 /* BTUIKFormField.h */,
 				A529010E1D8903A600032220 /* BTUIKInputAccessoryToolbar.h */,
+				8078C3D1220C87BC003D88F0 /* BTUIKLocalityFormField.h */,
 				A529010F1D8903A600032220 /* BTUIKLocalizedString.h */,
 				A52901101D8903A600032220 /* BTUIKMobileCountryCodeFormField.h */,
 				A52901111D8903A600032220 /* BTUIKMobileNumberFormField.h */,
 				A52901121D8903A600032220 /* BTUIKPaymentOptionCardView.h */,
 				A52901131D8903A600032220 /* BTUIKPaymentOptionType.h */,
 				A52901141D8903A600032220 /* BTUIKPostalCodeFormField.h */,
+				8078C3D5220C8A61003D88F0 /* BTUIKRegionFormField.h */,
 				A52901151D8903A600032220 /* BTUIKSecurityCodeFormField.h */,
+				805B03E2220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.h */,
 				A52901161D8903A600032220 /* BTUIKTextField.h */,
 				A52901171D8903A600032220 /* BTUIKUtil.h */,
 				A52901181D8903A600032220 /* BTUIKVectorArtView.h */,
@@ -972,7 +990,7 @@
 				A52901CF1D8903A700032220 /* BTUIKPayPalMonogramCardView.h in Headers */,
 				A52901C91D8903A700032220 /* BTUIKMaestroVectorArtView.h in Headers */,
 				A52901F81D8903A700032220 /* BTUIKLargeJCBVectorArtView.h in Headers */,
-				805B03E4220A2AF300DE2BC5 /* BTUIKAddressLine1FormField.h in Headers */,
+				805B03E4220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.h in Headers */,
 				A52902101D8903A700032220 /* BTUIKLargeVisaVectorArtView.h in Headers */,
 				A52901A41D8903A700032220 /* BTUIKPostalCodeFormField.h in Headers */,
 				A529019F1D8903A600032220 /* BTUIKLocalizedString.h in Headers */,
@@ -993,6 +1011,7 @@
 				03AE59581DDE7E8C000B594C /* BTUIKVisualAssetType.h in Headers */,
 				A52901B11D8903A700032220 /* BTUIKCardVectorArtView.h in Headers */,
 				A52902011D8903A700032220 /* BTUIKLargePayPalMonogramCardView.h in Headers */,
+				8078C3DB220C8CB5003D88F0 /* BTUIKCountryCodeFormField.h in Headers */,
 				A52901F21D8903A700032220 /* BTUIKLargeDinersClubVectorArtView.h in Headers */,
 				A52901AE1D8903A700032220 /* BTUIKApplePayMarkVectorArtView.h in Headers */,
 				A52901FE1D8903A700032220 /* BTUIKLargeMasterCardVectorArtView.h in Headers */,
@@ -1000,6 +1019,7 @@
 				A529019E1D8903A600032220 /* BTUIKInputAccessoryToolbar.h in Headers */,
 				A52901EF1D8903A700032220 /* BTUIKLargeCoinbaseMonogramCardView.h in Headers */,
 				A529019D1D8903A600032220 /* BTUIKFormField.h in Headers */,
+				8078C3D7220C8A61003D88F0 /* BTUIKRegionFormField.h in Headers */,
 				A52901AB1D8903A700032220 /* BTUIKAmExVectorArtView.h in Headers */,
 				A52901B71D8903A700032220 /* BTUIKCoinbaseWordmarkVectorArtView.h in Headers */,
 				A52901C31D8903A700032220 /* BTUIKDiscoverVectorArtView.h in Headers */,
@@ -1008,7 +1028,7 @@
 				A52901961D8903A600032220 /* BTUIKCardExpirationValidator.h in Headers */,
 				A52901E01D8903A700032220 /* BTUIKVenmoMonogramCardView.h in Headers */,
 				A52901C61D8903A700032220 /* BTUIKJCBVectorArtView.h in Headers */,
-				80AABB4F220A3A26005EBA24 /* BTUIKAddressLine2FormField.h in Headers */,
+				80AABB4F220A3A26005EBA24 /* BTUIKExtendedAddressFormField.h in Headers */,
 				A529019C1D8903A600032220 /* BTUIKExpiryInputView.h in Headers */,
 				A52901E91D8903A700032220 /* BTUIKLargeAmExVectorArtView.h in Headers */,
 				A52901F51D8903A700032220 /* BTUIKLargeDiscoverVectorArtView.h in Headers */,
@@ -1030,6 +1050,7 @@
 				A52901A81D8903A700032220 /* BTUIKVectorArtView.h in Headers */,
 				A52901A01D8903A600032220 /* BTUIKMobileCountryCodeFormField.h in Headers */,
 				A52901B41D8903A700032220 /* BTUIKCoinbaseMonogramCardView.h in Headers */,
+				8078C3D3220C87BC003D88F0 /* BTUIKLocalityFormField.h in Headers */,
 				A52901DB1D8903A700032220 /* BTUIKUnknownCardVectorArtView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1363,7 +1384,7 @@
 				A529018A1D8903A600032220 /* BTUIKLocalizedString.m in Sources */,
 				A52901C21D8903A700032220 /* BTUIKDinersClubVectorArtView.m in Sources */,
 				A52901BF1D8903A700032220 /* BTUIKCVVFrontVectorArtView.m in Sources */,
-				805B03E5220A2AF300DE2BC5 /* BTUIKAddressLine1FormField.m in Sources */,
+				805B03E5220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.m in Sources */,
 				A52901AD1D8903A700032220 /* BTUIKAmExVectorArtView.m in Sources */,
 				A52901D71D8903A700032220 /* BTUIKPayPalWordmarkVectorArtView.m in Sources */,
 				A52901BC1D8903A700032220 /* BTUIKCVVBackVectorArtView.m in Sources */,
@@ -1377,10 +1398,12 @@
 				A52902061D8903A700032220 /* BTUIKLargeUnionPayVectorArtView.m in Sources */,
 				A52901741D8903A600032220 /* BTUIKFormField.m in Sources */,
 				A52901E81D8903A700032220 /* BTUIKVisaVectorArtView.m in Sources */,
+				8078C3D4220C87BC003D88F0 /* BTUIKLocalityFormField.m in Sources */,
 				A52901881D8903A600032220 /* UIColor+BTUIK.m in Sources */,
 				A52902031D8903A700032220 /* BTUIKLargePayPalMonogramCardView.m in Sources */,
 				A52901801D8903A600032220 /* BTUIKSecurityCodeFormField.m in Sources */,
 				A52901E21D8903A700032220 /* BTUIKVenmoMonogramCardView.m in Sources */,
+				8078C3DC220C8CB5003D88F0 /* BTUIKCountryCodeFormField.m in Sources */,
 				A529020F1D8903A700032220 /* BTUIKLargeVenmoMonogramCardView.m in Sources */,
 				A529017A1D8903A600032220 /* BTUIKMobileNumberFormField.m in Sources */,
 				A52901DF1D8903A700032220 /* BTUIKVectorArtView.m in Sources */,
@@ -1414,7 +1437,8 @@
 				A52901FA1D8903A700032220 /* BTUIKLargeJCBVectorArtView.m in Sources */,
 				A52901F71D8903A700032220 /* BTUIKLargeDiscoverVectorArtView.m in Sources */,
 				A52901B61D8903A700032220 /* BTUIKCoinbaseMonogramCardView.m in Sources */,
-				80AABB50220A3A26005EBA24 /* BTUIKAddressLine2FormField.m in Sources */,
+				8078C3D8220C8A61003D88F0 /* BTUIKRegionFormField.m in Sources */,
+				80AABB50220A3A26005EBA24 /* BTUIKExtendedAddressFormField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
