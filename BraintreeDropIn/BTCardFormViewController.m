@@ -39,6 +39,12 @@
 @property (nonatomic, strong, readwrite) BTUIKPostalCodeFormField *postalCodeField;
 @property (nonatomic, strong, readwrite) BTUIKMobileCountryCodeFormField *mobileCountryCodeField;
 @property (nonatomic, strong, readwrite) BTUIKMobileNumberFormField *mobilePhoneField;
+@property (nonatomic, strong, readwrite) BTUIKStreetAddressFormField *streetAddressField;
+@property (nonatomic, strong, readwrite) BTUIKExtendedAddressFormField *extendedAddressField;
+@property (nonatomic, strong, readwrite) BTUIKLocalityFormField *localityField;
+@property (nonatomic, strong, readwrite) BTUIKRegionFormField *regionField;
+@property (nonatomic, strong, readwrite) BTUIKCountryCodeFormField *countryCodeField;
+
 @property (nonatomic, strong) UIStackView *cardNumberErrorView;
 @property (nonatomic, strong) UIStackView *cardNumberHeader;
 @property (nonatomic, strong) UIStackView *enrollmentFooter;
@@ -195,6 +201,16 @@
     self.mobileCountryCodeField.delegate = self;
     self.mobilePhoneField = [[BTUIKMobileNumberFormField alloc] init];
     self.mobilePhoneField.delegate = self;
+    self.streetAddressField = [[BTUIKStreetAddressFormField alloc] init];
+    self.streetAddressField.delegate = self;
+    self.extendedAddressField = [[BTUIKExtendedAddressFormField alloc] init];
+    self.extendedAddressField.delegate = self;
+    self.localityField = [[BTUIKLocalityFormField alloc] init];
+    self.localityField.delegate = self;
+    self.regionField = [[BTUIKRegionFormField alloc] init];
+    self.regionField.delegate = self;
+    self.countryCodeField = [[BTUIKCountryCodeFormField alloc] init];
+    self.countryCodeField.delegate = self;
     
     self.cardNumberHeader = [BTDropInUIUtilities newStackView];
     self.cardNumberHeader.layoutMargins = UIEdgeInsetsMake(0, [BTUIKAppearance verticalFormSpace], 0, [BTUIKAppearance verticalFormSpace]);
@@ -208,7 +224,7 @@
     [BTDropInUIUtilities addSpacerToStackView:self.cardNumberHeader beforeView:cardNumberHeaderLabel size: [BTUIKAppearance verticalFormSpace]];
     [self.stackView addArrangedSubview:self.cardNumberHeader];
 
-    self.formFields = @[self.cardNumberField, self.cardholderNameField, self.expirationDateField, self.securityCodeField, self.postalCodeField, self.mobileCountryCodeField, self.mobilePhoneField];
+    self.formFields = @[self.cardNumberField, self.cardholderNameField, self.expirationDateField, self.securityCodeField, self.mobileCountryCodeField, self.mobilePhoneField, self.streetAddressField, self.extendedAddressField, self.localityField, self.regionField, self.postalCodeField, self.countryCodeField];
 
     for (NSUInteger i = 0; i < self.formFields.count; i++) {
         BTUIKFormField *formField = self.formFields[i];
@@ -231,6 +247,11 @@
     self.postalCodeField.hidden = YES;
     self.mobileCountryCodeField.hidden = YES;
     self.mobilePhoneField.hidden = YES;
+    self.streetAddressField.hidden = YES;
+    self.extendedAddressField.hidden = YES;
+    self.localityField.hidden = YES;
+    self.regionField.hidden = YES;
+    self.countryCodeField.hidden = YES;
 
     [BTDropInUIUtilities addSpacerToStackView:self.stackView beforeView:self.cardNumberField size: [BTUIKAppearance verticalFormSpace]];
     [BTDropInUIUtilities addSpacerToStackView:self.stackView beforeView:self.cardholderNameField size: [BTUIKAppearance verticalFormSpace]];
@@ -397,6 +418,12 @@
             self.mobileCountryCodeField.hidden = ![self.requiredFields containsObject:self.mobileCountryCodeField] || collapsed;
             self.mobilePhoneField.hidden = ![self.requiredFields containsObject:self.mobilePhoneField] || collapsed;
             self.enrollmentFooter.hidden = self.mobilePhoneField.hidden;
+            self.streetAddressField.hidden = collapsed;
+            self.extendedAddressField.hidden = collapsed;
+            self.localityField.hidden = collapsed;
+            self.regionField.hidden = collapsed;
+            self.countryCodeField.hidden = collapsed;
+            
             [self updateFormBorders];
         } completion:^(__unused BOOL finished) {
             self.cardNumberFooter.hidden = !collapsed;
@@ -408,7 +435,12 @@
             self.mobileCountryCodeField.hidden = ![self.requiredFields containsObject:self.mobileCountryCodeField] || collapsed;
             self.mobilePhoneField.hidden = ![self.requiredFields containsObject:self.mobilePhoneField] || collapsed;
             self.enrollmentFooter.hidden = self.mobilePhoneField.hidden;
-            
+            self.streetAddressField.hidden = collapsed;
+            self.extendedAddressField.hidden = collapsed;
+            self.localityField.hidden = collapsed;
+            self.regionField.hidden = collapsed;
+            self.countryCodeField.hidden = collapsed;
+
             [self updateFormBorders];
             [self updateSubmitButton];
         }];
@@ -478,7 +510,8 @@
     self.mobileCountryCodeField.interFieldBorder = YES;
     self.mobilePhoneField.bottomBorder = YES;
 
-    NSArray *groupedFormFields = @[self.cardholderNameField, self.expirationDateField, self.securityCodeField, self.postalCodeField];
+    // TODO: Group fields together card vs billing
+    NSArray *groupedFormFields = @[self.cardholderNameField, self.expirationDateField, self.securityCodeField, self.streetAddressField, self.extendedAddressField, self.localityField, self.postalCodeField, self.regionField, self.countryCodeField];
     BOOL topBorderAdded = NO;
     BTUIKFormField* lastVisibleFormField;
     for (NSUInteger i = 0; i < groupedFormFields.count; i++) {
@@ -829,12 +862,16 @@
         if (formField.text.length >= 5) {
             [self advanceFocusFromField:formField];
         }
-    } else if (formField == self.securityCodeField && formField.text.length > 0) {
-        BTUIKCardType *cardType = self.cardNumberField.cardType;
-        if (cardType != nil && formField.text.length >= cardType.validCvvLength) {
-            [self advanceFocusFromField:formField];
-        }
     }
+    
+// COMMENTED THIS OUT SO IT DOESN'T AUTO SELECT POSTAL CODE
+//    else if (formField == self.securityCodeField && formField.text.length > 0) {
+//        BTUIKCardType *cardType = self.cardNumberField.cardType;
+//        if (cardType != nil && formField.text.length >= cardType.validCvvLength) {
+//            [self advanceFocusFromField:formField];
+//        }
+//    }
+    
 }
 
 - (BOOL)formFieldShouldReturn:(BTUIKFormField *)formField {

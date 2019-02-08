@@ -8,7 +8,8 @@
     if (self) {
         self.textField.accessibilityLabel = BTUIKLocalizedString(LOCALITY_LABEL);
         self.formLabel.text = BTUIKLocalizedString(LOCALITY_LABEL);
-        
+        self.textField.placeholder = BTUIKLocalizedString(LOCALITY_PLACEHOLDER);
+
         self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
         self.textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
         self.textField.returnKeyType = UIReturnKeyNext;

@@ -252,11 +252,31 @@ static NSArray *customTranslations;
 }
 
 + (NSString *)STREET_ADDRESS_LABEL {
-    return NSLocalizedStringWithDefaultValue(@"STREET_ADDRESS_LABEL", [self localizationTable], [self localizationBundle], @"Street Address", @"STREET_ADDRESS_LABEL");
+    return NSLocalizedStringWithDefaultValue(@"STREET_ADDRESS_LABEL", [self localizationTable], [self localizationBundle], @"Address Line 1", @"STREET_ADDRESS_LABEL");
 }
 
 + (NSString *)EXTENDED_ADDRESS_LABEL {
-    return NSLocalizedStringWithDefaultValue(@"EXTENDED_ADDRESS_LABEL", [self localizationTable], [self localizationBundle], @"Extended Address", @"EXTENDED_ADDRESS_LABEL");
+    return NSLocalizedStringWithDefaultValue(@"EXTENDED_ADDRESS_PLACEHOLDER", [self localizationTable], [self localizationBundle], @"Address Line 2", @"EXTENDED_ADDRESS_PLACEHOLDER");
+}
+
++ (NSString *)STREET_ADDRESS_PLACEHOLDER {
+    return NSLocalizedStringWithDefaultValue(@"STREET_ADDRESS_PLACEHOLDER", [self localizationTable], [self localizationBundle], @"123 Your House", @"STREET_ADDRESS_PLACEHOLDER");
+}
+
++ (NSString *)REGION_PLACEHOLDER {
+    return NSLocalizedStringWithDefaultValue(@"REGION_PLACEHOLDER", [self localizationTable], [self localizationBundle], @"State", @"REGION_PLACEHOLDER");
+}
+
++ (NSString *)LOCALITY_PLACEHOLDER {
+    return NSLocalizedStringWithDefaultValue(@"LOCALITY_PLACEHOLDER", [self localizationTable], [self localizationBundle], @"City", @"LOCALITY_PLACEHOLDER");
+}
+
++ (NSString *)COUNTRY_CODE_PLACEHOLDER {
+    return NSLocalizedStringWithDefaultValue(@"COUNTRY_CODE_PLACEHOLDER", [self localizationTable], [self localizationBundle], @"US", @"COUNTRY_CODE_PLACEHOLDER");
+}
+
++ (NSString *)EXTENDED_ADDRESS_PLACEHOLDER {
+    return NSLocalizedStringWithDefaultValue(@"STREET_ADDRESS_PLACEHOLDER", [self localizationTable], [self localizationBundle], @"Apt/Unit #", @"STREET_ADDRESS_PLACEHOLDER");
 }
 
 + (NSString *)LOCALITY_LABEL {
