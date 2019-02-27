@@ -255,6 +255,8 @@
     dropInRequest.shouldMaskSecurityCode = [BraintreeDemoSettings maskSecurityCode];
     dropInRequest.cardholderNameSetting = [BraintreeDemoSettings cardholderNameSetting];
 
+    dropInRequest.billingAddressRequired = YES;
+
     if ([[[NSProcessInfo processInfo] arguments] containsObject:@"-PayPalOneTime"]) {
         dropInRequest.payPalRequest = [[BTPayPalRequest alloc] initWithAmount:@"4.77"];
     }

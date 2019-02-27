@@ -58,6 +58,10 @@ typedef NS_ENUM(NSInteger, BTFormFieldSetting) {
 /// Defaults to false.
 @property (nonatomic, assign) BOOL vaultManager;
 
+/// Optional: If true, required billing address parameters.
+/// Defaults to false.
+@property (nonatomic, assign) BOOL billingAddressRequired;
+
 @end
 
 NS_ASSUME_NONNULL_END

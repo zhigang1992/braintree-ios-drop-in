@@ -271,6 +271,26 @@ static NSArray *customTranslations;
     return NSLocalizedStringWithDefaultValue(@"COUNTRY_CODE_LABEL", [self localizationTable], [self localizationBundle], @"Country", @"COUNTRY_CODE_LABEL");
 }
 
++ (NSString *)STREET_ADDRESS_PLACEHOLDER {
+    return NSLocalizedStringWithDefaultValue(@"STREET_ADDRESS_PLACEHOLDER", [self localizationTable], [self localizationBundle], @"123 Your House", @"STREET_ADDRESS_PLACEHOLDER");
+}
+
++ (NSString *)REGION_PLACEHOLDER {
+    return NSLocalizedStringWithDefaultValue(@"REGION_PLACEHOLDER", [self localizationTable], [self localizationBundle], @"State", @"REGION_PLACEHOLDER");
+}
+
++ (NSString *)LOCALITY_PLACEHOLDER {
+    return NSLocalizedStringWithDefaultValue(@"LOCALITY_PLACEHOLDER", [self localizationTable], [self localizationBundle], @"City", @"LOCALITY_PLACEHOLDER");
+}
+
++ (NSString *)COUNTRY_CODE_PLACEHOLDER {
+    return NSLocalizedStringWithDefaultValue(@"COUNTRY_CODE_PLACEHOLDER", [self localizationTable], [self localizationBundle], @"US", @"COUNTRY_CODE_PLACEHOLDER");
+}
+
++ (NSString *)EXTENDED_ADDRESS_PLACEHOLDER {
+    return NSLocalizedStringWithDefaultValue(@"STREET_ADDRESS_PLACEHOLDER", [self localizationTable], [self localizationBundle], @"Apt/Unit #", @"STREET_ADDRESS_PLACEHOLDER");
+}
+
 + (NSString *)PAYPAL {
     return NSLocalizedStringWithDefaultValue(@"PAYPAL", [self localizationTable], [self localizationBundle], @"PayPal", @"PAYPAL");
 }

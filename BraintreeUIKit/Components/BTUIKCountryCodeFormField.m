@@ -8,6 +8,7 @@
     if (self) {
         self.textField.accessibilityLabel = BTUIKLocalizedString(COUNTRY_CODE_LABEL);
         self.formLabel.text = BTUIKLocalizedString(COUNTRY_CODE_LABEL);
+        self.textField.placeholder = BTUIKLocalizedString(COUNTRY_CODE_PLACEHOLDER);
         
         self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
         self.textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
