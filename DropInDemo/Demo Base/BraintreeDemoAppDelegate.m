@@ -104,6 +104,11 @@ NSString *BraintreeDemoAppDelegatePaymentsURLScheme = @"com.braintreepayments.Dr
         [[NSUserDefaults standardUserDefaults] setInteger:BTFormFieldRequired forKey:@"BraintreeDemoCardholderNameSetting"];
     }
 
+    [[NSUserDefaults standardUserDefaults] setBool:FALSE forKey:@"BraintreeDemoBillingAddressRequired"];
+    if ([[[NSProcessInfo processInfo] arguments] containsObject:@"-BillingAddressRequired"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"BraintreeDemoBillingAddressRequired"];
+    }
+
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"BraintreeTest_ForceVenmoDisplay"];
     if ([[[NSProcessInfo processInfo] arguments] containsObject:@"-ForceVenmo"]) {
         [BTDropInOverrides setDisplayVenmoOption:YES];

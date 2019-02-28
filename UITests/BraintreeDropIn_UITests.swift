@@ -409,6 +409,203 @@ class BraintreeDropIn_CardholderNameRequired_UITests: XCTestCase {
     }
 }
 
+class BraintreeDropIn_BillingAddressNotRequired_UITests: XCTestCase {
+
+    var app: XCUIApplication!
+
+    override func setUp() {
+        super.setUp()
+        continueAfterFailure = false
+        app = XCUIApplication()
+        app.launchArguments.append("-EnvironmentSandbox")
+        app.launchArguments.append("-TokenizationKey")
+        app.launchArguments.append("-ThreeDSecureDefault")
+        app.launchArguments.append("-Integration:BraintreeDemoDropInViewController")
+        app.launch()
+        sleep(1)
+        self.waitForElementToBeHittable(app.buttons["Add Payment Method"])
+        app.buttons["Add Payment Method"].tap()
+    }
+
+    func testDropIn_billingAddressNotRequired_fieldsDontExist() {
+        self.waitForElementToBeHittable(app.staticTexts["Credit or Debit Card"])
+        app.staticTexts["Credit or Debit Card"].tap()
+
+        let elementsQuery = app.scrollViews.otherElements
+        let cardNumberTextField = elementsQuery.textFields["Card Number"]
+
+        self.waitForElementToBeHittable(cardNumberTextField)
+        cardNumberTextField.typeText("4111111111111111")
+
+        let streetAddressField = elementsQuery.textFields["Street Address"]
+        let extendedAddressField = elementsQuery.textFields["Extended Address"]
+        let regionField = elementsQuery.textFields["State"]
+        let localityField = elementsQuery.textFields["City"]
+        let countryCodeField = elementsQuery.textFields["Country"]
+
+        XCTAssertFalse(streetAddressField.exists)
+        XCTAssertFalse(extendedAddressField.exists)
+        XCTAssertFalse(regionField.exists)
+        XCTAssertFalse(localityField.exists)
+        XCTAssertFalse(countryCodeField.exists)
+    }
+}
+
+class BraintreeDropIn_BillingAddressRequired_UITests: XCTestCase {
+
+    var app: XCUIApplication!
+
+    override func setUp() {
+        super.setUp()
+        continueAfterFailure = false
+        app = XCUIApplication()
+        app.launchArguments.append("-EnvironmentSandbox")
+        app.launchArguments.append("-TokenizationKey")
+        app.launchArguments.append("-ThreeDSecureDefault")
+        app.launchArguments.append("-Integration:BraintreeDemoDropInViewController")
+        app.launchArguments.append("-BillingAddressRequired")
+        app.launch()
+        sleep(1)
+
+        self.waitForElementToBeHittable(app.buttons["Add Payment Method"])
+        app.buttons["Add Payment Method"].tap()
+
+        self.waitForElementToBeHittable(app.staticTexts["Credit or Debit Card"])
+        app.staticTexts["Credit or Debit Card"].tap()
+    }
+
+    func testDropIn_billingAddressFieldsRequired_fieldsExists() {
+        let elementsQuery = app.scrollViews.otherElements
+
+        let cardNumberTextField = elementsQuery.textFields["Card Number"]
+        self.waitForElementToBeHittable(cardNumberTextField)
+        cardNumberTextField.typeText("4111111111111111")
+
+        let streetAddressField = elementsQuery.textFields["Street Address"]
+        let extendedAddressField = elementsQuery.textFields["Extended Address"]
+        let regionField = elementsQuery.textFields["State"]
+        let localityField = elementsQuery.textFields["City"]
+        let countryField = elementsQuery.textFields["Country"]
+        let postalCodeField = elementsQuery.textFields["Postal Code"]
+
+        self.waitForElementToAppear(streetAddressField)
+        self.waitForElementToAppear(extendedAddressField)
+        self.waitForElementToAppear(regionField)
+        self.waitForElementToAppear(localityField)
+        self.waitForElementToAppear(countryField)
+        self.waitForElementToAppear(postalCodeField)
+
+        XCTAssertTrue(streetAddressField.exists)
+        XCTAssertTrue(extendedAddressField.exists)
+        XCTAssertTrue(regionField.exists)
+        XCTAssertTrue(localityField.exists)
+        XCTAssertTrue(countryField.exists)
+        XCTAssertTrue(postalCodeField.exists)
+    }
+
+    func testDropIn_billingAddressRequired_cannotAddCardWithoutAllFieldsComplete() {
+        let elementsQuery = app.scrollViews.otherElements
+
+        let cardNumberTextField = elementsQuery.textFields["Card Number"]
+        self.waitForElementToBeHittable(cardNumberTextField)
+        cardNumberTextField.typeText("4111111111111111")
+
+        self.waitForElementToBeHittable(app.staticTexts["2019"])
+        app.staticTexts["01"].forceTapElement()
+        app.staticTexts["2022"].forceTapElement()
+
+        let securityCodeField = elementsQuery.textFields["CVV"]
+        self.waitForElementToBeHittable(securityCodeField)
+        securityCodeField.forceTapElement()
+        securityCodeField.typeText("123")
+
+        let streetAddressField = elementsQuery.textFields["Street Address"]
+        self.waitForElementToBeHittable(streetAddressField)
+        streetAddressField.forceTapElement()
+        streetAddressField.typeText("\n")
+
+        let extendedAddressField = elementsQuery.textFields["Extended Address"]
+        self.waitForElementToBeHittable(extendedAddressField)
+        extendedAddressField.forceTapElement()
+        extendedAddressField.typeText("\n")
+
+        let localityField = elementsQuery.textFields["City"]
+        self.waitForElementToBeHittable(localityField)
+        localityField.forceTapElement()
+        localityField.typeText("\n")
+
+        let regionField = elementsQuery.textFields["State"]
+        self.waitForElementToBeHittable(regionField)
+        regionField.forceTapElement()
+        regionField.typeText("\n")
+
+        let postalCodeField = elementsQuery.textFields["Postal Code"]
+        self.waitForElementToBeHittable(postalCodeField)
+        postalCodeField.forceTapElement()
+        postalCodeField.typeText("\n")
+
+        let countryCodeField = elementsQuery.textFields["Country"]
+        self.waitForElementToBeHittable(countryCodeField)
+        countryCodeField.forceTapElement()
+        countryCodeField.typeText("\n")
+
+        XCTAssertFalse(app.buttons["Add Card"].isEnabled)
+    }
+
+    func testDropIn_billingAddressRequired_canAddCardWithAllFieldsComplete() {
+        let elementsQuery = app.scrollViews.otherElements
+
+        let cardNumberTextField = elementsQuery.textFields["Card Number"]
+        self.waitForElementToBeHittable(cardNumberTextField)
+        cardNumberTextField.typeText("4111111111111111")
+
+        self.waitForElementToBeHittable(app.staticTexts["2019"])
+        app.staticTexts["01"].forceTapElement()
+        app.staticTexts["2022"].forceTapElement()
+
+        let securityCodeField = elementsQuery.textFields["CVV"]
+        self.waitForElementToBeHittable(securityCodeField)
+        securityCodeField.forceTapElement()
+        securityCodeField.typeText("123")
+
+        let streetAddressField = elementsQuery.textFields["Street Address"]
+        self.waitForElementToBeHittable(streetAddressField)
+        streetAddressField.forceTapElement()
+        streetAddressField.typeText("123 Street Lane")
+
+        let extendedAddressField = elementsQuery.textFields["Extended Address"]
+        self.waitForElementToBeHittable(extendedAddressField)
+        extendedAddressField.forceTapElement()
+        extendedAddressField.typeText("Apt 1")
+
+        let localityField = elementsQuery.textFields["City"]
+        self.waitForElementToBeHittable(localityField)
+        localityField.forceTapElement()
+        localityField.typeText("Chicago")
+
+        let regionField = elementsQuery.textFields["State"]
+        self.waitForElementToBeHittable(regionField)
+        regionField.forceTapElement()
+        regionField.typeText("IL")
+
+        let postalCodeField = elementsQuery.textFields["Postal Code"]
+        self.waitForElementToBeHittable(postalCodeField)
+        postalCodeField.forceTapElement()
+        postalCodeField.typeText("12345")
+
+        let countryCodeField = elementsQuery.textFields["Country"]
+        self.waitForElementToBeHittable(countryCodeField)
+        countryCodeField.forceTapElement()
+        countryCodeField.typeText("US")
+
+        app.buttons["Add Card"].forceTapElement()
+
+        self.waitForElementToAppear(app.staticTexts["ending in 11"])
+
+        XCTAssertTrue(app.staticTexts["ending in 11"].exists);
+    }
+}
+
 class BraintreeDropIn_ClientToken_CardForm_UITests: XCTestCase {
     
     var app: XCUIApplication!

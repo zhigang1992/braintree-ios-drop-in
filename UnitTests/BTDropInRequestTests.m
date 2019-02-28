@@ -22,6 +22,7 @@
     originalRequest.cardholderNameSetting = BTFormFieldOptional;
     originalRequest.shouldMaskSecurityCode = YES;
     originalRequest.vaultManager = YES;
+    originalRequest.billingAddressRequired = YES;
 
     BTDropInRequest *copiedRequest = [originalRequest copy];
 
@@ -35,6 +36,7 @@
     XCTAssertEqual(originalRequest.cardholderNameSetting, copiedRequest.cardholderNameSetting);
     XCTAssertEqual(originalRequest.shouldMaskSecurityCode, copiedRequest.shouldMaskSecurityCode);
     XCTAssertEqual(originalRequest.vaultManager, copiedRequest.vaultManager);
+    XCTAssertEqual(originalRequest.billingAddressRequired, copiedRequest.billingAddressRequired);
 }
 
 @end

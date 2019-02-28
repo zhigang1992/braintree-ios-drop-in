@@ -326,10 +326,6 @@
         [self.requiredFields addObject:self.regionField];
         [self.requiredFields addObject:self.countryCodeField];
     }
-    [self.requiredFields addObject:self.expirationDateField];
-    if ([challenges containsObject:@"cvv"]) {
-        [self.requiredFields addObject:self.securityCodeField];
-    }
     if ([challenges containsObject:@"postal_code"]) {
         [self.requiredFields addObject:self.postalCodeField];
     }
@@ -873,7 +869,7 @@
         BTUIKPaymentOptionType paymentMethodType = [BTUIKViewUtil paymentMethodTypeForCardType:self.cardNumberField.cardType];
         [self.cardList emphasizePaymentOption:paymentMethodType];
     }
-    
+
     // Auto-advance fields when complete
     if (self.collapsed && formField == self.cardNumberField && formField.text.length > 0) {
         BTUIKCardType *cardType = self.cardNumberField.cardType;
@@ -884,14 +880,12 @@
         if (formField.text.length >= 5) {
             [self advanceFocusFromField:formField];
         }
+    } else if (formField == self.securityCodeField && formField.text.length > 0) {
+        BTUIKCardType *cardType = self.cardNumberField.cardType;
+        if (cardType != nil && formField.text.length >= cardType.validCvvLength) {
+            [self advanceFocusFromField:formField];
+        }
     }
-// COMMENTED THIS OUT SO IT DOESN'T AUTO SELECT POSTAL CODE
-//    } else if (formField == self.securityCodeField && formField.text.length > 0) {
-//        BTUIKCardType *cardType = self.cardNumberField.cardType;
-//        if (cardType != nil && formField.text.length >= cardType.validCvvLength) {
-//            [self advanceFocusFromField:formField];
-//        }
-//    }
 }
 
 - (BOOL)formFieldShouldReturn:(BTUIKFormField *)formField {

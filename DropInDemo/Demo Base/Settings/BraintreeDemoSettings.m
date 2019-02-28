@@ -77,4 +77,8 @@ NSString *BraintreeDemoSettingsThreeDSecureRequiredDefaultsKey = @"BraintreeDemo
     return [NSUserDefaults.standardUserDefaults integerForKey:@"BraintreeDemoCardholderNameSetting"];
 }
 
++ (BOOL)billingAddressRequired {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"BraintreeDemoBillingAddressRequired"];
+}
+
 @end
