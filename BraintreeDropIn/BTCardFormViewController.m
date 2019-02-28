@@ -319,6 +319,10 @@
     if (self.dropInRequest.cardholderNameSetting != BTFormFieldDisabled) {
         [self.requiredFields addObject:self.cardholderNameField];
     }
+    [self.requiredFields addObject:self.expirationDateField];
+    if ([challenges containsObject:@"cvv"]) {
+        [self.requiredFields addObject:self.securityCodeField];
+    }
     if (self.dropInRequest.billingAddressRequired) {
         [self.requiredFields addObject:self.streetAddressField];
         [self.requiredFields addObject:self.extendedAddressField];
