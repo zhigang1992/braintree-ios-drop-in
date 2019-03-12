@@ -31,11 +31,28 @@
     }
 }
 
+- (NSArray *)getAllCountryNames {
+    // Gets a list of all alpha2 country codes
+    NSArray *allCountryCodes = [NSLocale ISOCountryCodes];
+
+    // Generate list of all country names. Language of the names will be based on user's locale.
+    NSMutableArray *countries = [NSMutableArray arrayWithCapacity: [[NSLocale ISOCountryCodes] count]];
+    for (NSString *countryCode in allCountryCodes) {
+        NSString *identifier = [NSLocale localeIdentifierFromComponents: [NSDictionary dictionaryWithObject: countryCode forKey: NSLocaleCountryCode]]; // get country identifier, based on user's current language (NSLocaleCountryCode)
+        NSString *countryName = [[NSLocale currentLocale] displayNameForKey: NSLocaleIdentifier value: identifier]; // convert identifier to name
+        [countries addObject: countryName];
+    }
+
+    return countries;
+}
+
+// MARK: - TODO: Instead of a text field, make this a UIPickerView (scroll view with selection options).
+
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     NSString *newText = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    return newText.length <= 255;
+    return newText.length <= 2;
 }
 
 @end

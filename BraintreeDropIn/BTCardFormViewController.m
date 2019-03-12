@@ -160,6 +160,10 @@
     [self loadConfiguration];
     
     self.firstResponderFormField = self.cardNumberField;
+
+    // WIP - Auto fill in the user's current country code
+    // MARK: - TODO Move this into BTUIKCountryCodeFormField
+    self.countryCodeField.text = [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

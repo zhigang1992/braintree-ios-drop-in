@@ -254,7 +254,8 @@
     dropInRequest.cardDisabled = [[[NSProcessInfo processInfo] arguments] containsObject:@"-CardDisabled"];
     dropInRequest.shouldMaskSecurityCode = [BraintreeDemoSettings maskSecurityCode];
     dropInRequest.cardholderNameSetting = [BraintreeDemoSettings cardholderNameSetting];
-    dropInRequest.billingAddressRequired = [BraintreeDemoSettings billingAddressRequired];
+    // dropInRequest.billingAddressRequired = [BraintreeDemoSettings billingAddressRequired];
+    dropInRequest.billingAddressRequired = YES; // force billing address enabled for dev purposes
 
     if ([[[NSProcessInfo processInfo] arguments] containsObject:@"-PayPalOneTime"]) {
         dropInRequest.payPalRequest = [[BTPayPalRequest alloc] initWithAmount:@"4.77"];
