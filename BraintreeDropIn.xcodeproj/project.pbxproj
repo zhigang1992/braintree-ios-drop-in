@@ -31,6 +31,8 @@
 		A03FC5AB215AD10B00E3DF95 /* BTUIKCardholderNameFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = A03FC5A9215AD10B00E3DF95 /* BTUIKCardholderNameFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A03FC5AC215AD10B00E3DF95 /* BTUIKCardholderNameFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = A03FC5AA215AD10B00E3DF95 /* BTUIKCardholderNameFormField.m */; };
 		A0C7F57222429B9100789317 /* BTUICountries.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0C7F57422429B9100789317 /* BTUICountries.strings */; };
+		A0E9E774224424F600851500 /* BTUIKLocalizedCountries.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E9E772224424F600851500 /* BTUIKLocalizedCountries.h */; };
+		A0E9E775224424F600851500 /* BTUIKLocalizedCountries.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E9E773224424F600851500 /* BTUIKLocalizedCountries.m */; };
 		A50ED7A61D8AF8C400A78EF0 /* BTPaymentSelectionViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A50ED7A51D8AF8C400A78EF0 /* BTPaymentSelectionViewControllerTests.m */; };
 		A50ED7A81D8B02AF00A78EF0 /* BTUIKViewUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A50ED7A71D8B02AF00A78EF0 /* BTUIKViewUtilTests.m */; };
 		A52901621D8903A600032220 /* BTUIKBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A52900D01D8903A600032220 /* BTUIKBarButtonItem.h */; };
@@ -289,6 +291,8 @@
 		A03FC5AA215AD10B00E3DF95 /* BTUIKCardholderNameFormField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKCardholderNameFormField.m; sourceTree = "<group>"; };
 		A0C7F57322429B9100789317 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BTUICountries.strings; sourceTree = "<group>"; };
 		A0C7F57722429B9D00789317 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/BTUICountries.strings; sourceTree = "<group>"; };
+		A0E9E772224424F600851500 /* BTUIKLocalizedCountries.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKLocalizedCountries.h; sourceTree = "<group>"; };
+		A0E9E773224424F600851500 /* BTUIKLocalizedCountries.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKLocalizedCountries.m; sourceTree = "<group>"; };
 		A50ED7A51D8AF8C400A78EF0 /* BTPaymentSelectionViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPaymentSelectionViewControllerTests.m; sourceTree = "<group>"; };
 		A50ED7A71D8B02AF00A78EF0 /* BTUIKViewUtilTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTUIKViewUtilTests.m; sourceTree = "<group>"; };
 		A52900361D88FB5100032220 /* BraintreeUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BraintreeUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -623,6 +627,8 @@
 			children = (
 				A52900E81D8903A600032220 /* BTUI.strings */,
 				A52900E71D8903A600032220 /* BTUIKLocalizedString.m */,
+				A0E9E772224424F600851500 /* BTUIKLocalizedCountries.h */,
+				A0E9E773224424F600851500 /* BTUIKLocalizedCountries.m */,
 				A0C7F57422429B9100789317 /* BTUICountries.strings */,
 			);
 			path = Localization;
@@ -1014,6 +1020,7 @@
 				A52901EC1D8903A700032220 /* BTUIKLargeApplePayMarkVectorArtView.h in Headers */,
 				03AE59581DDE7E8C000B594C /* BTUIKVisualAssetType.h in Headers */,
 				A52901B11D8903A700032220 /* BTUIKCardVectorArtView.h in Headers */,
+				A0E9E774224424F600851500 /* BTUIKLocalizedCountries.h in Headers */,
 				A52902011D8903A700032220 /* BTUIKLargePayPalMonogramCardView.h in Headers */,
 				8078C3DB220C8CB5003D88F0 /* BTUIKCountryCodeFormField.h in Headers */,
 				A52901F21D8903A700032220 /* BTUIKLargeDinersClubVectorArtView.h in Headers */,
@@ -1383,6 +1390,7 @@
 				A03FC5AC215AD10B00E3DF95 /* BTUIKCardholderNameFormField.m in Sources */,
 				A52901DD1D8903A700032220 /* BTUIKUnknownCardVectorArtView.m in Sources */,
 				A52901C81D8903A700032220 /* BTUIKJCBVectorArtView.m in Sources */,
+				A0E9E775224424F600851500 /* BTUIKLocalizedCountries.m in Sources */,
 				A52901781D8903A600032220 /* BTUIKMobileCountryCodeFormField.m in Sources */,
 				A52901FD1D8903A700032220 /* BTUIKLargeMaestroVectorArtView.m in Sources */,
 				A52901B31D8903A700032220 /* BTUIKCardVectorArtView.m in Sources */,

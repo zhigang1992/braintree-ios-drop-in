@@ -1,6 +1,12 @@
 #import "BTUIKCountryCodeFormField.h"
 #import "BTUIKLocalizedString.h"
 
+@interface BTUIKCountryCodeFormField () <UIPickerViewDataSource, UIPickerViewDelegate>
+
+@property (strong, nonatomic) UIPickerView *countryPickerView;
+
+@end
+
 @implementation BTUIKCountryCodeFormField
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -13,6 +19,11 @@
         self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
         self.textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
         self.textField.returnKeyType = UIReturnKeyNext;
+
+        self.countryPickerView = [UIPickerView new];
+        self.countryPickerView.dataSource = self;
+        self.countryPickerView.delegate = self;
+        self.textField.inputView = self.countryPickerView;
     }
     
     return self;
@@ -53,6 +64,22 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     NSString *newText = [textField.text stringByReplacingCharactersInRange:range withString:string];
     return newText.length <= 2;
+}
+
+#pragma mark - UIPickerViewDataSource
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return 2;
+}
+
+#pragma mark - UIPickerViewDelegate
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
 }
 
 @end
