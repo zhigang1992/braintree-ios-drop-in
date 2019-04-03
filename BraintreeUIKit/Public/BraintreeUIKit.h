@@ -35,3 +35,5 @@ FOUNDATION_EXPORT const unsigned char BraintreeUIKitVersionString[];
 #import "BTUIKLocalityFormField.h"
 #import "BTUIKRegionFormField.h"
 #import "BTUIKCountryCodeFormField.h"
+#import "BTUIKCountry.h"
+#import "BTUIKLocalizedCountries.h"

@@ -18,6 +18,14 @@
 		03AE59581DDE7E8C000B594C /* BTUIKVisualAssetType.h in Headers */ = {isa = PBXBuildFile; fileRef = 03AE59571DDE7E8C000B594C /* BTUIKVisualAssetType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03B793AD1DAD61B500F54B1B /* BTDropInResultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B793AC1DAD61B500F54B1B /* BTDropInResultTests.m */; };
 		03FFF6B01DB82E9D004A1F9B /* BTUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = A52900E81D8903A600032220 /* BTUI.strings */; };
+		53E78BE022248A29000388D3 /* BTUIKHipercardVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E78BDC22248A29000388D3 /* BTUIKHipercardVectorArtView.h */; };
+		53E78BE322248A29000388D3 /* BTUIKHipercardVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E78BDF22248A29000388D3 /* BTUIKHipercardVectorArtView.m */; };
+		53E78BE622248BC3000388D3 /* BTUIKLargeHiperVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E78BE422248BC3000388D3 /* BTUIKLargeHiperVectorArtView.h */; };
+		53E78BE722248BC3000388D3 /* BTUIKLargeHiperVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E78BE522248BC3000388D3 /* BTUIKLargeHiperVectorArtView.m */; };
+		53E78BEA22248BFE000388D3 /* BTUIKLargeHipercardVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E78BE822248BFE000388D3 /* BTUIKLargeHipercardVectorArtView.h */; };
+		53E78BEB22248BFE000388D3 /* BTUIKLargeHipercardVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E78BE922248BFE000388D3 /* BTUIKLargeHipercardVectorArtView.m */; };
+		53E78BEE22248FD9000388D3 /* BTUIKHiperVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E78BEC22248FD9000388D3 /* BTUIKHiperVectorArtView.h */; };
+		53E78BEF22248FD9000388D3 /* BTUIKHiperVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E78BED22248FD9000388D3 /* BTUIKHiperVectorArtView.m */; };
 		805B03E4220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 805B03E2220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		805B03E5220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 805B03E3220A2AF300DE2BC5 /* BTUIKStreetAddressFormField.m */; };
 		8078C3D3220C87BC003D88F0 /* BTUIKLocalityFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 8078C3D1220C87BC003D88F0 /* BTUIKLocalityFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,18 +36,12 @@
 		8078C3DC220C8CB5003D88F0 /* BTUIKCountryCodeFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8078C3DA220C8CB5003D88F0 /* BTUIKCountryCodeFormField.m */; };
 		80AABB4F220A3A26005EBA24 /* BTUIKExtendedAddressFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 80AABB4D220A3A26005EBA24 /* BTUIKExtendedAddressFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80AABB50220A3A26005EBA24 /* BTUIKExtendedAddressFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AABB4E220A3A26005EBA24 /* BTUIKExtendedAddressFormField.m */; };
-		53E78BE022248A29000388D3 /* BTUIKHipercardVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E78BDC22248A29000388D3 /* BTUIKHipercardVectorArtView.h */; };
-		53E78BE322248A29000388D3 /* BTUIKHipercardVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E78BDF22248A29000388D3 /* BTUIKHipercardVectorArtView.m */; };
-		53E78BE622248BC3000388D3 /* BTUIKLargeHiperVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E78BE422248BC3000388D3 /* BTUIKLargeHiperVectorArtView.h */; };
-		53E78BE722248BC3000388D3 /* BTUIKLargeHiperVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E78BE522248BC3000388D3 /* BTUIKLargeHiperVectorArtView.m */; };
-		53E78BEA22248BFE000388D3 /* BTUIKLargeHipercardVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E78BE822248BFE000388D3 /* BTUIKLargeHipercardVectorArtView.h */; };
-		53E78BEB22248BFE000388D3 /* BTUIKLargeHipercardVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E78BE922248BFE000388D3 /* BTUIKLargeHipercardVectorArtView.m */; };
-		53E78BEE22248FD9000388D3 /* BTUIKHiperVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E78BEC22248FD9000388D3 /* BTUIKHiperVectorArtView.h */; };
-		53E78BEF22248FD9000388D3 /* BTUIKHiperVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E78BED22248FD9000388D3 /* BTUIKHiperVectorArtView.m */; };
 		A03FC5AB215AD10B00E3DF95 /* BTUIKCardholderNameFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = A03FC5A9215AD10B00E3DF95 /* BTUIKCardholderNameFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A03FC5AC215AD10B00E3DF95 /* BTUIKCardholderNameFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = A03FC5AA215AD10B00E3DF95 /* BTUIKCardholderNameFormField.m */; };
+		A06287702252A4D60079709B /* BTUIKCountry.h in Headers */ = {isa = PBXBuildFile; fileRef = A062876E2252A4D60079709B /* BTUIKCountry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A06287712252A4D60079709B /* BTUIKCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = A062876F2252A4D60079709B /* BTUIKCountry.m */; };
 		A0C7F57222429B9100789317 /* BTUICountries.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0C7F57422429B9100789317 /* BTUICountries.strings */; };
-		A0E9E774224424F600851500 /* BTUIKLocalizedCountries.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E9E772224424F600851500 /* BTUIKLocalizedCountries.h */; };
+		A0E9E774224424F600851500 /* BTUIKLocalizedCountries.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E9E772224424F600851500 /* BTUIKLocalizedCountries.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0E9E775224424F600851500 /* BTUIKLocalizedCountries.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E9E773224424F600851500 /* BTUIKLocalizedCountries.m */; };
 		A50ED7A61D8AF8C400A78EF0 /* BTPaymentSelectionViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A50ED7A51D8AF8C400A78EF0 /* BTPaymentSelectionViewControllerTests.m */; };
 		A50ED7A81D8B02AF00A78EF0 /* BTUIKViewUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A50ED7A71D8B02AF00A78EF0 /* BTUIKViewUtilTests.m */; };
@@ -305,6 +307,8 @@
 		9E9A2DAB5BA53008228298F4 /* libPods-Tests-UnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-UnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03FC5A9215AD10B00E3DF95 /* BTUIKCardholderNameFormField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKCardholderNameFormField.h; sourceTree = "<group>"; };
 		A03FC5AA215AD10B00E3DF95 /* BTUIKCardholderNameFormField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKCardholderNameFormField.m; sourceTree = "<group>"; };
+		A062876E2252A4D60079709B /* BTUIKCountry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKCountry.h; sourceTree = "<group>"; };
+		A062876F2252A4D60079709B /* BTUIKCountry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIKCountry.m; sourceTree = "<group>"; };
 		A0C7F57322429B9100789317 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BTUICountries.strings; sourceTree = "<group>"; };
 		A0C7F57722429B9D00789317 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/BTUICountries.strings; sourceTree = "<group>"; };
 		A0E9E772224424F600851500 /* BTUIKLocalizedCountries.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIKLocalizedCountries.h; sourceTree = "<group>"; };
@@ -590,8 +594,8 @@
 				A52900CF1D8903A600032220 /* Components */,
 				A52900E21D8903A600032220 /* Helpers */,
 				A52900E61D8903A600032220 /* Localization */,
-				A52900FE1D8903A600032220 /* Models */,
 				A52901031D8903A600032220 /* Public */,
+				A52900FE1D8903A600032220 /* Models */,
 				A529011B1D8903A600032220 /* Vector Art */,
 			);
 			path = BraintreeUIKit;
@@ -643,7 +647,6 @@
 			children = (
 				A52900E81D8903A600032220 /* BTUI.strings */,
 				A52900E71D8903A600032220 /* BTUIKLocalizedString.m */,
-				A0E9E772224424F600851500 /* BTUIKLocalizedCountries.h */,
 				A0E9E773224424F600851500 /* BTUIKLocalizedCountries.m */,
 				A0C7F57422429B9100789317 /* BTUICountries.strings */,
 			);
@@ -656,6 +659,7 @@
 				A52900FF1D8903A600032220 /* BTUIKCardExpirationValidator.m */,
 				A52901001D8903A600032220 /* BTUIKCardExpiryFormat.m */,
 				A52901011D8903A600032220 /* BTUIKCardType.m */,
+				A062876F2252A4D60079709B /* BTUIKCountry.m */,
 				A52901021D8903A600032220 /* BTUIKUtil.m */,
 			);
 			path = Models;
@@ -672,6 +676,7 @@
 				A52901081D8903A600032220 /* BTUIKCardListLabel.h */,
 				A52901091D8903A600032220 /* BTUIKCardNumberFormField.h */,
 				A529010A1D8903A600032220 /* BTUIKCardType.h */,
+				A062876E2252A4D60079709B /* BTUIKCountry.h */,
 				8078C3D9220C8CB5003D88F0 /* BTUIKCountryCodeFormField.h */,
 				A529010B1D8903A600032220 /* BTUIKExpiryFormField.h */,
 				A529010C1D8903A600032220 /* BTUIKExpiryInputView.h */,
@@ -679,6 +684,7 @@
 				A529010D1D8903A600032220 /* BTUIKFormField.h */,
 				A529010E1D8903A600032220 /* BTUIKInputAccessoryToolbar.h */,
 				8078C3D1220C87BC003D88F0 /* BTUIKLocalityFormField.h */,
+				A0E9E772224424F600851500 /* BTUIKLocalizedCountries.h */,
 				A529010F1D8903A600032220 /* BTUIKLocalizedString.h */,
 				A52901101D8903A600032220 /* BTUIKMobileCountryCodeFormField.h */,
 				A52901111D8903A600032220 /* BTUIKMobileNumberFormField.h */,
@@ -1089,6 +1095,7 @@
 				A52901A81D8903A700032220 /* BTUIKVectorArtView.h in Headers */,
 				A52901A01D8903A600032220 /* BTUIKMobileCountryCodeFormField.h in Headers */,
 				A52901B41D8903A700032220 /* BTUIKCoinbaseMonogramCardView.h in Headers */,
+				A06287702252A4D60079709B /* BTUIKCountry.h in Headers */,
 				8078C3D3220C87BC003D88F0 /* BTUIKLocalityFormField.h in Headers */,
 				A52901DB1D8903A700032220 /* BTUIKUnknownCardVectorArtView.h in Headers */,
 			);
@@ -1231,7 +1238,7 @@
 					};
 					A5411A291D8A20D00041BE92 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						TestTargetID = A5CE1D131D835832009BE61A;
 					};
 					A56C41691D833348000DFFAB = {
@@ -1253,6 +1260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				en_AU,
@@ -1481,6 +1489,7 @@
 				A52901641D8903A600032220 /* BTUIKBarButtonItem.m in Sources */,
 				A52901FA1D8903A700032220 /* BTUIKLargeJCBVectorArtView.m in Sources */,
 				A52901F71D8903A700032220 /* BTUIKLargeDiscoverVectorArtView.m in Sources */,
+				A06287712252A4D60079709B /* BTUIKCountry.m in Sources */,
 				A52901B61D8903A700032220 /* BTUIKCoinbaseMonogramCardView.m in Sources */,
 				8078C3D8220C8A61003D88F0 /* BTUIKRegionFormField.m in Sources */,
 				80AABB50220A3A26005EBA24 /* BTUIKExtendedAddressFormField.m in Sources */,
@@ -1871,8 +1880,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = DropInDemo;
 			};
 			name = Debug;
@@ -1912,8 +1920,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.braintreepayments.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = DropInDemo;
 				VALIDATE_PRODUCT = YES;
 			};
