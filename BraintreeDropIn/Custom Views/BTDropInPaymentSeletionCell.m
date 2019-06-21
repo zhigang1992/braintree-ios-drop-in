@@ -32,6 +32,9 @@
         self.label.translatesAutoresizingMaskIntoConstraints = NO;
         [self.labelContainer addSubview:self.label];
 
+        self.label.font = [UIFont preferredFontForTextStyle: UIFontTextStyleBody];
+        self.label.adjustsFontForContentSizeCategory = YES;
+
         self.detailLabel = [[UILabel alloc] init];
         [BTUIKAppearance styleLabelSecondary:self.detailLabel];
         self.detailLabel.translatesAutoresizingMaskIntoConstraints = NO;
