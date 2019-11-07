@@ -90,6 +90,11 @@ class DemoSettings: NSObject {
     static var customerIdentifier: String? {
         return UserDefaults.standard.string(forKey: "BraintreeDemoCustomerIdentifier")
     }
+
+    @objc
+    static var createVaultedPaymentMethod: Bool {
+        return UserDefaults.standard.bool(forKey: "BraintreeDemoCreateVaultedPaymentMethod")
+    }
     
     @objc
     static var paypalDisabled: Bool {
