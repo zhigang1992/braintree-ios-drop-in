@@ -21,6 +21,9 @@ class DemoMerchantAPIClient: NSObject {
             if DemoSettings.createVaultedPaymentMethod {
                 urlComponents.queryItems?.append(URLQueryItem(name: "add_payment_method", value: "true"))
             }
+            else if DemoSettings.createVaulted3DS2PaymentMethod {
+                urlComponents.queryItems?.append(URLQueryItem(name: "add_3ds_card", value: "true"))
+            }
         }
         
         let task = URLSession.shared.dataTask(with: urlComponents.url!) { (data, response, error) in

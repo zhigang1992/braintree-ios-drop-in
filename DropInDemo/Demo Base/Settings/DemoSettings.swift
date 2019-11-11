@@ -95,6 +95,11 @@ class DemoSettings: NSObject {
     static var createVaultedPaymentMethod: Bool {
         return UserDefaults.standard.bool(forKey: "BraintreeDemoCreateVaultedPaymentMethod")
     }
+
+    @objc
+    static var createVaulted3DS2PaymentMethod: Bool {
+        return UserDefaults.standard.bool(forKey: "BraintreeDemoCreateVaulted3DS2PaymentMethod")
+    }
     
     @objc
     static var paypalDisabled: Bool {
