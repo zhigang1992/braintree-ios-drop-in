@@ -417,11 +417,7 @@
 }
 
 - (CGFloat)safeAreaHeight {
-    if (@available(iOS 11.0, *)) {
-        return CGRectGetHeight(self.view.safeAreaLayoutGuide.layoutFrame);
-    } else {
-        return CGRectGetHeight(UIScreen.mainScreen.bounds) - self.topLayoutGuide.length - self.bottomLayoutGuide.length;
-    }
+    return CGRectGetHeight(self.view.safeAreaLayoutGuide.layoutFrame);
 }
 
 - (CGFloat)calculateContentViewTopConstraintConstant {
@@ -435,19 +431,11 @@
 }
 
 - (NSLayoutAnchor *)topLayoutAnchor {
-    if (@available(iOS 11.0, *)) {
-        return self.view.safeAreaLayoutGuide.topAnchor;
-    } else {
-        return self.topLayoutGuide.bottomAnchor;
-    }
+    return self.view.safeAreaLayoutGuide.topAnchor;
 }
 
 - (NSLayoutAnchor *)bottomLayoutAnchor {
-    if (@available(iOS 11.0, *)) {
-        return self.view.safeAreaLayoutGuide.bottomAnchor;
-    } else {
-        return self.bottomLayoutGuide.topAnchor;
-    }
+    return self.view.safeAreaLayoutGuide.bottomAnchor;
 }
 
 #pragma mark - UI Preferences
